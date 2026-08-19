@@ -5,5 +5,13 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "loguru>=0.7.3",
     "pre-commit>=4.6.2",
+    "punq>=0.8.0",
+    "starlette>=1.6.0",
 ]
+
+[tool.pyright]
+pythonVersion = "3.14"
+venvPath = "."
+venv = ".venv"

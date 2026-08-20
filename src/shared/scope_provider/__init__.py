@@ -30,7 +30,7 @@ class _LazyContainer:
 container = cast(punq.Container, _LazyContainer())
 
 
-def set_container(c: punq.Container) -> None:
+def set_container(c: punq.Container | None) -> None:
     """Called by the DI bootstrap to inject the container. Do NOT call directly."""
     global _container
     _container = c

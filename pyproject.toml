@@ -5,13 +5,27 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "httpx>=0.28.1",
     "loguru>=0.7.3",
     "pre-commit>=4.6.2",
     "punq>=0.8.0",
+    "pydantic>=2.13.4",
     "starlette>=1.6.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.25.0",
 ]
 
 [tool.pyright]
 pythonVersion = "3.14"
 venvPath = "."
 venv = ".venv"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+pythonpath = ["src"]
+testpaths = ["tests"]
